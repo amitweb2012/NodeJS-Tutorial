@@ -49,7 +49,7 @@ async function sampleQueries() {
         $set: { age: 100, name: 'Rob' },
         $push: { tags: "updated" },
       },
-      { new: true }
+      { new: true, useFindAndModify: false } // Added useFindAndModify: false to fix the deprecation warning 
     );
     console.log("updated user", updateUser);
     

@@ -19,11 +19,11 @@ app.get('/', (req, res) => {
   res.status(200).json({
     message: "Welcome to our bookstore api",
   });
-})
+});
 // get all book details
 app.get('/books', (req, res) => {
   res.status(200).json(books);
-})
+});
 
 /**
  * get single book details
@@ -38,7 +38,7 @@ app.get('/book/:id', (req, res) => {
       message: "Book not found! Please try with a different Book ID",
     })
   }
-})
+});
 
 app.post('/add', (req, res) => {
   const newBook = {
@@ -50,7 +50,7 @@ app.post('/add', (req, res) => {
     data: newBook,
     message: "Book has been added sucessfully!"
   });
-})
+});
 
 app.put('/update/:id', (req, res) => {
   const findCurrentBook = books.find((bookItem) => bookItem.id === req.params.id);
@@ -65,7 +65,7 @@ app.put('/update/:id', (req, res) => {
       message: "Book not found",
     });
   }
-})
+});
 
 app.delete('/delete/:id', (req, res) => {
   const findIndexOfCurrentBook = books.findIndex((bookItem) => bookItem.id === req.params.id);
@@ -80,10 +80,10 @@ app.delete('/delete/:id', (req, res) => {
       message: "Book not found",
     });
   }
-})
+});
 
 const PORT = 3000;
 
 app.listen(PORT, () => {
   console.log(`Server is now running at port ${PORT}`);
-})
+});
