@@ -44,7 +44,7 @@ The server will start on the specified port (default: `3000`).
 
 ## API Endpoints
 relative route
-**USE** app.use("/api/books", bookRoutes);
+**USE**  `app.use("/api/books", bookRoutes)`;
 
 ### 1. Get All Books
    **GET** `/get`
