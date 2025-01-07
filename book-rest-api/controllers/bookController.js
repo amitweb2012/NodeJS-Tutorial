@@ -1,8 +1,8 @@
-const Book = require('../model/book');
+const Book = require('../models/bookModel');
 
 const getAllBooks = async (req, res) => {
   try {
-    const allBooks = await Book.find({}).select("title author price year -_id");
+    const allBooks = await Book.find({}).select("title author genre price year -_id");
     if (allBooks?.length > 0) {
       res.status(200).json({
         success: true,

@@ -16,14 +16,14 @@ const bookSchema = mongoose.Schema({
   price: {
     type: Number,
     required: [true, "Price is required"],
-    min: [50, "Price must be atleast 50"],
+    min: [1, "Price must be atleast 1"],
     max: [1000, "Price must be more 1000"],
   },
-  year: {
-    type: Number,
-    required: [true, "Publication year is required"],
-    min: [1000, "Year must be atleast 1000"],
-    max: [new Date().getFullYear(), "Year cannot be in the future"],
+  genre: {
+    type: String,
+    required: [true, "Genre is required"],
+    trim: true,
+    maxLength: [100, "Genre title can not be more than 100 characters"],
   },
   createdAt: {
     type: Date,
