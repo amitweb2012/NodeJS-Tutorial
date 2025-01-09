@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 // receive events from event bus with type of event example: CommentCreated and change status based on content example if content includes 'orange' then status is rejected 
 app.post('/events', async (req, res) => {
   const { type, data } = req.body;
-  if (type === 'CommentCreated') { 
+  if (type === 'CommentCreated') {
     const status = data.content.includes('orange') ? 'rejected' : 'approved';
     await axios.post('http://localhost:4005/events', {
       type: 'CommentModerated',
