@@ -1,3 +1,4 @@
+// Module: Moderation Service
 const express = require('express');
 const bodyParser = require('body-parser');
 const axios = require('axios');
@@ -5,6 +6,7 @@ const axios = require('axios');
 const app = express();
 app.use(bodyParser.json());
 
+// receive events from event bus with type of event example: CommentCreated and change status based on content example if content includes 'orange' then status is rejected 
 app.post('/events', async (req, res) => {
   const { type, data } = req.body;
   if (type === 'CommentCreated') { 
