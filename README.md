@@ -39,8 +39,17 @@ This is a simple Book Store API built using Express.js and Mongoose. It provides
    ```bash
    npm start
    ```
+   The server will start on the specified port (default: `3000`).
+or
+   ```bash
+   docker-compose up --build
+   ```
+## Some useful commands
 
-The server will start on the specified port (default: `3000`).
+Start Services: docker-compose up
+Stop Services: docker-compose down
+Rebuild a Service: docker-compose up --build service-name
+View Logs: docker-compose logs -f 
 
 ## API Endpoints
 relative route
@@ -177,8 +186,12 @@ book-rest-api/
 │   └── bookRoutes.js     # API routes
 ├── server.js             # Main application file
 ├── package.json          # Project metadata and dependencies
+├── docker-compose.yml    # Docker Compose configuration
+├── Dockerfile            # Docker build instructions
+├── .dockerignore         # ignore files and folder
 ├── .env                  # Environment variables
 └── README.md             # Documentation
+
 ```
 
 ## License
