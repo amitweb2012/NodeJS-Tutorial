@@ -41,7 +41,7 @@ This is a simple Book Store API built using Express.js and Mongoose. It provides
    ```
    The server will start on the specified port (default: `3000`).
    
-## OR
+Or
 
 5. ```bash
    docker-compose up --build
