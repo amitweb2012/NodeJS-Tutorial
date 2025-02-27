@@ -249,7 +249,7 @@ relative route
 book-rest-api/
 ├── config/
 │   └── db.js              # database connection with mongoose
-│   └── regis.js           # redis to store JWT refresh token  
+│   └── redis.js           # redis to store JWT refresh token  
 ├── contollers/
 │   └── authController.js  # Authetication logic 
 │   └── bookController.js  # business logic for CRUD 
@@ -259,15 +259,15 @@ book-rest-api/
 │   └── bookModel.js       # Mongoose schema and model for books
 │   └── userModel.js       # Mongoose schema and model for users
 ├── routes/
-│   └── bookRoutes.js     # API routes for books
-│   └── authRoutes.js     # API routes for authentication and user profile
-├── server.js             # Main application file
-├── package.json          # Project metadata and dependencies
-├── docker-compose.yml    # Docker Compose configuration
-├── Dockerfile            # Docker build instructions
-├── .dockerignore         # ignore files and folder
-├── .env                  # Environment variables
-└── README.md             # Documentation
+│   └── bookRoutes.js      # API routes for books
+│   └── authRoutes.js      # API routes for authentication and user profile
+├── server.js              # Main application file
+├── package.json           # Project metadata and dependencies
+├── docker-compose.yml     # Docker Compose configuration
+├── Dockerfile             # Docker build instructions
+├── .dockerignore          # ignore files and folder
+├── .env                   # Environment variables
+└── README.md              # Documentation
 
 ```
 
