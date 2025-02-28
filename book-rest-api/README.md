@@ -19,7 +19,6 @@ This is a simple Book Store API built using Express.js and Mongoose. It provides
 
 - Node.js (v14.x or later)
 - MongoDB (running locally or in the cloud)
-- Redis
 
 ## Installation
 
@@ -248,8 +247,7 @@ relative route
 ```
 book-rest-api/
 ├── config/
-│   └── db.js              # database connection with mongoose
-│   └── redis.js           # redis to store JWT refresh token  
+│   └── db.js              # database connection with mongoose 
 ├── contollers/
 │   └── authController.js  # Authetication logic 
 │   └── bookController.js  # business logic for CRUD 
